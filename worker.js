@@ -16,7 +16,7 @@ export default {
 
     // Redirect root to GitHub
     if (url.pathname === '/') {
-      return Response.redirect('https://github.com/imaliang/tmdb-proxy', 301);
+      return Response.redirect('https://github.com/hcl-z/tmdb-proxy-cf', 301);
     }
 
     // Image proxy: /t/p/* → image.tmdb.org
