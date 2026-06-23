@@ -30,7 +30,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/your-username/tmdb-proxy-cf.git
+git clone https://github.com/hcl-z/tmdb-proxy-cf.git
 cd tmdb-proxy-cf
 
 # 2. 安装依赖
@@ -79,6 +79,44 @@ https://image.tmdb.org/t/p/w500/poster.jpg
 
 # 代理地址
 https://tmdb.yourdomain.com/t/p/w500/poster.jpg
+```
+
+## 本地测试
+
+复制 `.env.example` 并填入你的 TMDB API Key：
+
+```bash
+cp .env.example .env
+# 编辑 .env，填入 TMDB_API_KEY
+npm test
+```
+
+测试输出示例：
+
+```
+🔗 Proxy: https://tmdb.yourdomain.com
+
+📽️  热门电影 (前5)
+  [157336] 星际穿越 (2014) ⭐ 8.4
+  ...
+
+🔍 搜索: "星际穿越"
+  命中: [157336] 星际穿越 — 近未来的地球黄沙遍野...
+
+📄 详情: 星际穿越
+  时长: 169 分钟
+  类型: 冒险 / 剧情 / 科幻
+  导演: 克里斯托弗·诺兰
+  主演: 马修·麦康纳, 安妮·海瑟薇, 迈克尔·凯恩
+
+🖼️  图片代理
+  海报: https://tmdb.yourdomain.com/t/p/w500/c35Vwd9rmMQfaEJuUrJRF3LZWJX.jpg
+  背景: https://tmdb.yourdomain.com/t/p/original/2ssWTSVklAEc98frZUQhgtGHx7s.jpg
+
+⚡ 缓存测试
+  首次: 99ms  二次: 45ms  ✅ 缓存生效
+
+✅ 所有测试通过
 ```
 
 ## 与 Vercel 版本的区别
